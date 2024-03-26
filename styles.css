@@ -2,17 +2,15 @@ body,
 html {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  align-content: center;
   background-color: hsl(30, 38%, 92%);
 }
 
 main {
   height: 60%;
   width: 60%;
-  border-radius: 15px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .card-container {
@@ -24,12 +22,15 @@ main {
 .image-container,
 .info-container {
   width: 50%;
-  height: 100%;
+
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .info-container {
   background-color: hsl(0, 0%, 100%);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 img {

@@ -5,6 +5,15 @@ html {
   background-color: hsl(30, 38%, 92%);
   height: 100vh;
   overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(212, 21%, 14%);
+}
+
+h1,
+.sale-price {
+  font-family: "Fraunces", serif;
+  font-size: 48px;
+  font-weight: 700;
 }
 
 main {
@@ -12,6 +21,9 @@ main {
   display: flex;
   flex-direction: row;
   margin: 5% auto;
+  background-color: hsl(0, 0%, 100%);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .image-container,
@@ -30,19 +42,41 @@ img {
   background-color: hsl(0, 0%, 100%);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  margin-right: 40px;
+  margin-left: 20px;
 }
 
 .category {
   text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+  padding-top: 50px;
+}
+
+p {
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
 }
 
 .retail-price {
   text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button {
+  width: 95%;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 15px;
 }
 
 .attribution {
   width: 100%;
-
+  bottom: 0;
+  left: 0;
+  position: absolute;
   font-size: 11px;
   text-align: center;
 }

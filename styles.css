@@ -65,6 +65,7 @@ h1,
 }
 
 button {
+  margin-top: 5%;
   border: none;
   color: hsl(0, 0%, 100%);
   background-color: hsl(158, 36%, 37%);
@@ -74,16 +75,57 @@ button {
   padding: 14px;
 }
 
-footer {
-  position: absolute;
+button:hover {
+  background-color: hsl(156, 42%, 18%);
+  cursor: pointer;
+}
+
+.attribution {
+  position: relative;
   width: 100%;
   bottom: 0;
   left: 0;
-
   font-size: 11px;
   text-align: center;
   margin: 10% 0;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    height: 100vh;
+  }
+
+  .container {
+    height: 75%;
+    width: 60%;
+    flex-direction: row;
+  }
+
+  .mobile-image {
+    display: none;
+  }
+
+  .desktop-image {
+    display: block;
+    height: 100%;
+    width: 50%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  main {
+    width: 50%;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 52px;
+    margin: 0;
+  }
 }

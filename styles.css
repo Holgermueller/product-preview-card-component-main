@@ -7,11 +7,9 @@ html {
   box-sizing: border-box;
 }
 
-.container {
-  margin: 16px auto;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
+main {
+  width: 80%;
+  margin: 5% auto 0;
 }
 
 .desktop-image {
@@ -19,9 +17,10 @@ html {
 }
 
 .mobile-image {
+  height: 50%;
+  display: block;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  width: 100%;
 }
 
 .info-container {
@@ -37,7 +36,7 @@ html {
 }
 
 .description {
-  font-size: 14px;
+  font-size: 0.75rem;
   color: hsl(228, 12%, 48%);
   line-height: 24px;
 }
@@ -63,6 +62,7 @@ h1,
   text-decoration: line-through;
   color: hsl(228, 12%, 48%);
   padding-left: 24px;
+  transform: translateY(-50%);
 }
 
 button {
@@ -86,13 +86,11 @@ i {
 }
 
 .attribution {
-  position: relative;
   width: 100%;
   bottom: 0;
   left: 0;
   font-size: 11px;
   text-align: center;
-  margin: 10% 0;
 }
 
 .attribution a {
@@ -100,21 +98,20 @@ i {
 }
 
 @media screen and (min-width: 600px) {
-  body {
+  body,
+  html {
     height: 100vh;
-  }
-
-  .main-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
-  .container {
-    width: 60%;
+  main {
+    width: 50%;
+    height: 70%;
+    display: flex;
     flex-direction: row;
-    margin-top: 30px;
   }
 
   .mobile-image {
@@ -123,24 +120,22 @@ i {
 
   .desktop-image {
     display: block;
-    height: 100%;
-    width: 50%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
   }
 
+  .desktop-image,
   .info-container {
     width: 50%;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 15px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 
-  h1 {
-    font-size: 52px;
-    margin: 0;
+  .info-container {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    display: grid;
+  }
+
+  button {
+    align-self: self-end;
   }
 }
